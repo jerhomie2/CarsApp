@@ -13,9 +13,10 @@ st.title('Auctioned Cars Data')
 
 tab1, tab2, tab3 = st.tabs(['Make','Model','Color'])
 with tab1:
-    input_make = st.text_input('Enter a make:', value='CHEVROLET')
-    make_df = df[df['Make'] == input_make].copy()
-    fig1 = px.line(make_df, x='VehYear', y='MMRCurrentRetailCleanPrice')
+    input_make = st.text_input('Enter a make (ALL CAPS):', value='CHEVROLET')
+    input_model = st.text_input('Enter a model (ALL CAPS):', value='IMPALA')
+    df1 = df[df['Make'] == input_make & df['Model'] == input_model].copy()
+    fig1 = px.line(df1, x='VehYear', y='MMRCurrentRetailCleanPrice')
     st.plotly_chart(fig1)
 
 with tab2:
