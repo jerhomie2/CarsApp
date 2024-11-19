@@ -21,3 +21,9 @@ with tab1:
 
 with tab2:
     input_model = st.text_input('Enter a model:', value='IMPALA')
+
+with tab3:
+    input_color = st.text_input('Enter a color(ALL CAPS):', value='RED')
+    df3 = df[df['Color'] == input_color].copy()
+    fig3 = px.line(df1, x='VehYear', y='MMRCurrentRetailCleanPrice')
+    st.plotly_chart(fig3)
