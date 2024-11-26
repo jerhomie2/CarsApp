@@ -1,2 +1,2 @@
-# CarsApp
-code for a streamlit app using data from the kaggle Don't Get Kicked Competition about auctioned cars
+# SleepApp
+code for a streamlit app using data from kaggle on sleep health
